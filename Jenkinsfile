@@ -9,4 +9,10 @@ pipeline {
             }
         }   
     }
+    
+    stage('Unit Tests - JUnit and JaCoCo') {
+      steps {
+        bat "mvn test"
+      }
+    }
 }
