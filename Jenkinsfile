@@ -17,7 +17,7 @@ pipeline {
       }
     stage('SonarQube - SAST') {
 	    steps {
-		    withSonarQubeEnv('SONAR') {
+		    withSonarQubeEnv('SonarQube') {
 			    bat "mvn sonar:sonar -Dsonar.projectKey=kubernetes-devops-security -Dsonar.host.url=http://localhost:9000"
 		    }
 	   }
